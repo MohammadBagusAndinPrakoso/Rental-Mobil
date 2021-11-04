@@ -76,8 +76,10 @@
                     </form>
 
                     <?php
-                } else { ?>
-
+                } else { 
+                    # Untuk menambahkan data baru
+                    ?>
+                    
                     <form action="process-mobil.php" method="post" enctype="multipart/form-data">
                         ID Mobil
                        <input type="number" name="id_mobil"

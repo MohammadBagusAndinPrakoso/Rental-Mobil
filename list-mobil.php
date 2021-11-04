@@ -10,9 +10,11 @@
 <body>
     <div class="container">
         <div class="card">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                 <h4 class="text-white">
-                    List Mobil Rental
+                    <b>
+                        List Mobil Rental
+                    </b>
                 </h4>
             </div>
 

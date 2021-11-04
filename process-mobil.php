@@ -30,7 +30,7 @@ if (isset($_POST["simpan_mobil"])) {
         # direct/menuju halaman/web list mobil rental
         header("location:list-mobil.php");
     } else {
-        echo "Upload File Gagal..."
+        echo "Upload File Gagal...";
     }
 } elseif (isset($_POST["update_mobil"])) {
     # menampung data yg dikirim
@@ -129,6 +129,6 @@ if (isset($_POST["simpan_mobil"])) {
                 echo mysqli_error($connect);
             }
     }
-}
+
 
 ?>
