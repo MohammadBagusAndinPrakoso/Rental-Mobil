@@ -35,7 +35,7 @@
                         or merk like '%$search%' or jenis like '%$search%' 
                         or warna like '%$search%' or tahun_pembuatan like '%$search%'";
                     } else {
-                        ?> <h4>Tidak ada data yang sesuai...</h4>
+                        ?> <h5>Tidak ada data yang sesuai...</h5>
 
                         <?php
                         $sql = "select * from mobil";
@@ -67,6 +67,12 @@
                                         <button class="btn btn-success btn-block">
                                             Edit
                                         </button>
+                                    </a>
+
+                                    <a href="delete.php?id_anggota=<?php=$mobil["id_mobil"];?>">
+                                        <button class="btn btn-danger btn-block">
+                                            Hapus
+                                        </button>    
                                     </a>
                                 </div>
                             </div>

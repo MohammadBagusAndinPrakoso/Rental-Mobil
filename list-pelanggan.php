@@ -27,12 +27,16 @@
                 <ul class="list-group">
                     <?php
                     
-                    include "connectiom.php";
+                    include "connection.php";
                     if (isset($_GET["search"])) {
                         $search = $_GET["search"];
                         $sql = "select * from pelanggan where id_pelanggan like '%$search%' or nama_pelanggan like '%$search%'
                         or kontak like '%$search%'";
                     } else {
+                        ?>
+                        <h5>Tidak ada data yang sesuai...</h5>
+                        
+                        <?php
                         $sql = "select * from pelanggan";
                     }
                     

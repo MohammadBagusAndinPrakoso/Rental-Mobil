@@ -12,11 +12,13 @@
         <div class="card">
             <div class="card-header bg-info">
                 <h5 class="text-white">
-                    Form Rental Mobil
+                    <b>
+                        Form Rental Mobil
+                    </b>
                 </h5>
             </div>
 
-            <div >
+            <div class="card-body">
                 <?php
                 
                 if (isset($_GET["id_mobil"])) {
@@ -33,42 +35,43 @@
                     $mobil = mysqli_fetch_array($hasil);                    
                     ?>
 
-                    <form action="process-mobil.php" method="post" enctype="multipart/form-data">
+                    <form action="process-mobil.php" method="post" enctype="multipart/form-data"
+                    onsubmit="return confirm('Apakah anda yakin ingin mengubah data ini?')">
                         ID Mobil
                        <input type="number" name="id_mobil"
-                        class="form-control mb-2" required
-                        value="<?=$buku["isbn"]?>" readonly>
+                        class="form-control mb-3" required
+                        value="<?=$mobil["id_mobil"]?>" readonly>
 
                         Merk
                        <input type="text" name="merk"
-                        class="form-control mb-2" required
-                        value="<?=$buku["merk"]?>">
+                        class="form-control mb-3" required
+                        value="<?=$mobil["merk"]?>">
 
                         Tipe
                        <input type="text" name="tipe"
-                        class="form-control mb-2" required
-                        value="<?=$buku["tipe"]?>">
+                        class="form-control mb-3" required
+                        value="<?=$mobil["tipe"]?>">
 
                         Warma
                        <input type="text" name="warna"
-                        class="form-control mb-2" required
-                        value="<?=$buku["warna"]?>">
+                        class="form-control mb-3" required
+                        value="<?=$mobil["warna"]?>">
 
                         Tahun Pembuatan
                        <input type="number" name="tahun_pembuatan"
-                        class="form-control mb-2" required
-                        value="<?=$buku["tahun_pembuatan"]?>">
+                        class="form-control mb-3" required
+                        value="<?=$mobil["tahun_pembuatan"]?>">
 
                         Biaya Sewa Per Hari
                        <input type="text" name="biaya_hari"
-                        class="form-control mb-2" required
-                        value="<?=$buku["biaya_hari"]?>" >
+                        class="form-control mb-3" required
+                        value="<?=$mobil["biaya_hari"]?>" >
 
                         Gambar Mobil
                         <br>
                         <img src="gambar_mobil/<?=$mobil["image"]?>" width="200">
                         <input type="file" name="image"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         <button type="submit" class="btn btn-success btn-block" name="update_mobil">
                             Simpan
@@ -83,31 +86,31 @@
                     <form action="process-mobil.php" method="post" enctype="multipart/form-data">
                         ID Mobil
                        <input type="number" name="id_mobil"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         Merk
                        <input type="text" name="merk"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         Tipe
                        <input type="text" name="tipe"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         Warma
                        <input type="text" name="warna"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         Tahun Pembuatan
                        <input type="number" name="tahun_pembuatan"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         Biaya Sewa Per Hari
                        <input type="text" name="biaya_hari"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         Gambar Mobil
                        <input type="file" name="image"
-                        class="form-control mb-2" required>
+                        class="form-control mb-3" required>
 
                         <button type="submit" class="btn btn-success btn-block" name="simpan_mobil">
                             Simpan

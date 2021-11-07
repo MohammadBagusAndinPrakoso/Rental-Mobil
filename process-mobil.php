@@ -7,11 +7,11 @@ if (isset($_POST["simpan_mobil"])) {
     $merk = $_POST["merk"];
     $tipe = $_POST["tipe"];
     $warna = $_POST["warna"];
-    $tahun_pembuatan = $_POST["id_mobil"];
+    $tahun_pembuatan = $_POST["tahun_pembuatan"];
     $biaya_hari = $_POST["biaya_hari"];
 
     # manage upload file (image mobil)
-    $fileName = $_FILES["gambar_mobil"]["name"];
+    $fileName = $_FILES["cover"]["name"];
     $extension = pathinfo($_FILES["gambar_mobil"]["name"]);
     $ext = $extension["extension"];
     $image = time()."-".$fileName;
